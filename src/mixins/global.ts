@@ -18,15 +18,13 @@ export default (data: Data) => {
     img.value = image;
   }
   onMounted(() => {
-    import(/* @vite-ignore */ `/public/${data.images[img.value]}`).then(
-      (res) => {
-        imgReactive.value = res.default;
-        firstImage.value = res.default;
-      }
-    );
+    import(/* @vite-ignore */ `/${data.images[img.value]}`).then((res) => {
+      imgReactive.value = res.default;
+      firstImage.value = res.default;
+    });
   });
   watch(img, (oldImg) => {
-    import(/* @vite-ignore */ `/public/${data.images[oldImg]}`).then((res) => {
+    import(/* @vite-ignore */ `/${data.images[oldImg]}`).then((res) => {
       imgReactive.value = res.default;
     });
   });
