@@ -17,16 +17,14 @@ export default (data: Data) => {
     current.value = name;
     img.value = image;
   }
-  onMounted(() => {
-    import(/* @vite-ignore */ `/${data.images[img.value]}`).then((res) => {
-      imgReactive.value = res.default;
-      firstImage.value = res.default;
-    });
+  onMounted(async () => {
+    const res = new URL(`../${data.images[img.value]}`, import.meta.url).href;
+    imgReactive.value = res;
+    firstImage.value = res;
   });
-  watch(img, (oldImg) => {
-    import(/* @vite-ignore */ `/${data.images[oldImg]}`).then((res) => {
-      imgReactive.value = res.default;
-    });
+  watch(img, async (oldImg) => {
+    const res = new URL(`../${data.images[img.value]}`, import.meta.url).href;
+    imgReactive.value = res;
   });
   return {
     current,
