@@ -1,4 +1,4 @@
-export default interface Data {
+export interface Data {
   name: string;
   overview: DataContent;
   structure: DataContent;

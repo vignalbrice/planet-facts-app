@@ -1,5 +1,5 @@
 <script lang="ts">
-import type Data from "@/types/data";
+import type { Data } from "@/types/data";
 import { defineComponent } from "vue";
 
 export default defineComponent({

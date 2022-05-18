@@ -3,7 +3,7 @@ import { defineComponent } from "vue";
 import { usePlanetsStore } from "../stores/planets";
 import SwitchComponent from "../components/SwitchComponent/SwitchComponent.vue";
 import CardGroup from "../components/CardGroup/CardGroup.vue";
-import useGlobalMixins from "@/mixins/global";
+import { useGlobalMixins } from "@/mixins/global";
 
 const planets = usePlanetsStore();
 export default defineComponent({
