@@ -7,7 +7,6 @@ import { resolve } from "path";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue(), vueJsx()],
-  publicDir: "assets",
   mode: "production",
   build: {
     outDir: "dist",
