@@ -17,12 +17,12 @@ export const useGlobalMixins = (data: Data) => {
     img.value = image;
   }
   onMounted(async () => {
-    const res = `/src/${data.images[img.value]}`;
+    const res = `/${data.images[img.value]}`;
     imgReactive.value = res;
     firstImage.value = res;
   });
   watch(img, async (oldImg) => {
-    const res = `/src/${data.images[oldImg]}`;
+    const res = `/${data.images[oldImg]}`;
     imgReactive.value = res;
   });
   return {
