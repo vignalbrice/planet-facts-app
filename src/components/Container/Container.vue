@@ -2,8 +2,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  setup() {},
-  name: "Container",
+  name: "ContentContainer",
 });
 </script>
 

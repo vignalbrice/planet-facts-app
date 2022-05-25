@@ -1,5 +1,4 @@
-import type { Data } from "@/types/data";
-import type { DataImgType, DataType } from "@/types/data";
+import type { Data, DataType, DataImgType } from "@/types/data";
 import { onMounted, ref, watch } from "vue";
 
 export const useGlobalMixins = (data: Data) => {
@@ -18,12 +17,12 @@ export const useGlobalMixins = (data: Data) => {
     img.value = image;
   }
   onMounted(async () => {
-    const res = new URL(`../${data.images[img.value]}`, import.meta.url).href;
+    const res = `/src/${data.images[img.value]}`;
     imgReactive.value = res;
     firstImage.value = res;
   });
   watch(img, async (oldImg) => {
-    const res = new URL(`../${data.images[img.value]}`, import.meta.url).href;
+    const res = `/src/${data.images[oldImg]}`;
     imgReactive.value = res;
   });
   return {

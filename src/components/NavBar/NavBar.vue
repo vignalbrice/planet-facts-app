@@ -2,7 +2,6 @@
 import { defineComponent } from "vue";
 import { pathNames } from "@/router/routes";
 export default defineComponent({
-  setup() {},
   name: "NavBar",
   data() {
     return {

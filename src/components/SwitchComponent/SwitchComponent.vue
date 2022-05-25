@@ -72,38 +72,6 @@ export default defineComponent({
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   height: 70%;
-
-  .switch-button {
-    display: flex;
-    flex-direction: column;
-    width: 350px;
-    margin: 1rem 0;
-    button {
-      width: 100%;
-      height: 48px;
-      cursor: pointer;
-      background: transparent;
-      color: #fff;
-      border: thin solid rgba(255, 255, 255, 0.8);
-      outline: none;
-      margin-bottom: 1rem;
-      font-family: "League Spartan", sans-serif;
-      font-weight: bold;
-      font-size: 14px;
-      text-transform: uppercase;
-      text-align: left;
-      transition: all ease 0.3s;
-      letter-spacing: 2.57px;
-      span {
-        margin: 0 1.6rem;
-        color: rgba(255, 255, 255, 0.7);
-      }
-    }
-    .active {
-      background: #419ebb;
-      border: none;
-    }
-  }
 }
 
 section {

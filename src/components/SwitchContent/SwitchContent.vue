@@ -1,9 +1,7 @@
 <script lang="ts">
-import type { Data } from "@/types/data";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  setup() {},
   name: "SwitchContent",
   props: {
     data: {

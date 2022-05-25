@@ -1,8 +1,8 @@
 <script lang="ts">
-import { defineComponent } from "vue";
 import { usePlanetsStore } from "../stores/planets";
-import SwitchComponent from "../components/SwitchComponent/SwitchComponent.vue";
+import { defineComponent, onMounted, ref, watch } from "vue";
 import CardGroup from "../components/CardGroup/CardGroup.vue";
+import SwitchComponent from "../components/SwitchComponent/SwitchComponent.vue";
 import { useGlobalMixins } from "@/mixins/global";
 
 const planets = usePlanetsStore();
@@ -10,7 +10,7 @@ export default defineComponent({
   name: "MercuryView",
   setup() {
     const { current, firstImage, img, imgReactive, data, setCurrentData } =
-      useGlobalMixins(planets.mercury);
+      useGlobalMixins(planets.neptune);
     return {
       current,
       firstImage,
