@@ -10,7 +10,7 @@ export default defineComponent({
   name: "MercuryView",
   setup() {
     const { current, firstImage, img, imgReactive, data, setCurrentData } =
-      useGlobalMixins(planets.neptune);
+      useGlobalMixins(planets.mercury);
     return {
       current,
       firstImage,
