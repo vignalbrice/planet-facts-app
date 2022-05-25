@@ -29,7 +29,7 @@ export default defineComponent({
       <a :href="data[current].source" class="source-link" target="_blank"
         >Wikipedia
       </a>
-      <img src="@/assets/images/icons/icon-source.svg" alt="wikipedia" />
+      <img src="/assets/images/icons/icon-source.svg" alt="wikipedia" />
     </span>
   </div>
 </template>
