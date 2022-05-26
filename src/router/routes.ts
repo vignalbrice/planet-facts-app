@@ -64,15 +64,16 @@ export enum RoutesLink {
 }
 
 export const pathNames = [
-  { name: "Mercury", path: RoutesLink.Mercury },
-  { name: "Venus", path: RoutesLink.Venus },
+  { name: "Mercury", path: RoutesLink.Mercury, color: "$paleblue" },
+  { name: "Venus", path: RoutesLink.Venus, color: "$yellow" },
   {
     name: "Earth",
     path: RoutesLink.Earth,
+    color: "$purple",
   },
-  { name: "Mars", path: RoutesLink.Mars },
-  { name: "Jupiter", path: RoutesLink.Jupiter },
-  { name: "Saturn", path: RoutesLink.Saturn },
-  { name: "Uranus", path: RoutesLink.Uranus },
-  { name: "Neptune", path: RoutesLink.Neptune },
+  { name: "Mars", path: RoutesLink.Mars, color: "$tomato" },
+  { name: "Jupiter", path: RoutesLink.Jupiter, color: "$red" },
+  { name: "Saturn", path: RoutesLink.Saturn, color: "$orange" },
+  { name: "Uranus", path: RoutesLink.Uranus, color: "$lightgreen" },
+  { name: "Neptune", path: RoutesLink.Neptune, color: "$blue" },
 ];

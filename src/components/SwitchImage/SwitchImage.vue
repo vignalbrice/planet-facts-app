@@ -45,4 +45,20 @@ export default defineComponent({
     width: 163px !important;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  section {
+    height: 400px;
+    img {
+      max-width: 200px !important;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  section {
+    height: 350px;
+    img {
+      max-width: 111px !important;
+    }
+  }
+}
 </style>

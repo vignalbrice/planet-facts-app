@@ -30,7 +30,7 @@ export default defineComponent({
     :current="current"
     :img="img"
     :data="urnaus"
-    title="Urnaus"
+    title="Uranus"
     :imgReactive="imgReactive"
     :firstImage="firstImage"
     @setCurrentData="setCurrentData"

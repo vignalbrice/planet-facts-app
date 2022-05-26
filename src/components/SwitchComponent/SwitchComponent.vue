@@ -3,6 +3,8 @@ import { defineComponent } from "vue";
 import SwitchImage from "@/components/SwitchImage/SwitchImage.vue";
 import SwitchContent from "@/components/SwitchContent/SwitchContent.vue";
 import SwitchButton from "../SwitchButton/SwitchButton.vue";
+import colors from "@/theme/colors";
+import { pathNames } from "@/router/routes";
 
 export default defineComponent({
   name: "SwitchComponent",
@@ -32,6 +34,12 @@ export default defineComponent({
       type: String,
     },
   },
+  setup() {
+    return {
+      pathNames,
+      colors,
+    };
+  },
   components: { SwitchImage, SwitchContent, SwitchButton },
   methods: {
     setCurrentData(name: string, image: string) {
@@ -51,12 +59,17 @@ export default defineComponent({
           :firstImage="firstImage"
         />
         <aside>
-          <!--Switch Content Component -->
-          <switch-content :data="data" :current="current" :title="title" />
+          <div class="responsive-content">
+            <!--Switch Content Component -->
+            <switch-content :data="data" :current="current" :title="title" />
+          </div>
           <!--Switch Button Component-->
           <switch-button
             :current="current"
             @setCurrentData="(name, image) => setCurrentData(name, image)"
+            :color="
+              colors[pathNames.filter((el) => el.name === title)[0].color]
+            "
           />
         </aside>
       </div>
@@ -72,6 +85,7 @@ export default defineComponent({
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   height: 70%;
+  position: relative;
 }
 
 section {
@@ -102,6 +116,34 @@ aside {
         margin: 0 0 0 0.3rem;
       }
     }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container-switch {
+    display: block;
+    height: auto;
+  }
+  aside {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+    /* margin: 0 auto; */
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container-switch {
+    display: block;
+    height: auto;
+  }
+  aside {
+    flex-direction: row;
+    width: 100%;
+  }
+  .responsive-content {
+    text-align: center;
+    margin-bottom: 1rem;
   }
 }
 </style>

@@ -1998,6 +1998,11 @@ vue-router@^4.0.14:
   dependencies:
     "@vue/devtools-api" "^6.0.0"
 
+vue-screen@^2.1.0-beta.1:
+  version "2.1.0-beta.1"
+  resolved "https://registry.yarnpkg.com/vue-screen/-/vue-screen-2.1.0-beta.1.tgz#b9a3b3a893d71444d577995d6f377d9d9dcc7565"
+  integrity sha512-U1qpJ3vteECELCin8y6QTh/tDfvfn96ExzzcVY+gL4kLUiJk4rC/+vJaV9Zsd7iK33JKx8kn3wYhM1nmQmD7tQ==
+
 vue-tsc@^0.34.7:
   version "0.34.16"
   resolved "https://registry.yarnpkg.com/vue-tsc/-/vue-tsc-0.34.16.tgz#92cc8cc23bc3e979d44bc8ed9a318d46ee5201fa"

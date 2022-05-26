@@ -34,4 +34,25 @@ export default defineComponent({
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    font-size: 44px !important;
+  }
+  p {
+    font-size: 14px;
+  }
+  span {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 40px !important;
+    line-height: normal;
+  }
+  p {
+    font-size: 11px;
+  }
+}
+</style>
